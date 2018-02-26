@@ -1,0 +1,334 @@
+/* CSS reset */
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+body {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 18px;
+}
+/* menu navigation accuires this class after >100px scroll is detected in JS */
+
+.backgr {
+	background-color: #f1eee9;
+}
+/*setting up parallax effect for homepage  */
+
+#landing {
+	background-image: url("../images/woman-small.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	min-height: 1000px;
+	width: 100%;
+}
+/*setting up white transparent overlay on top of background image, same width and height  */
+
+.overlay {
+	background-color: rgba(255, 255, 255, 0.5);
+	position: absolute;
+	width: 100%;
+	min-height: 1000px;
+}
+.hero-text {
+	font-weight: 200;
+	margin-top: 25%;
+	margin-left: 45%;
+	font-size: 1.5rem;
+}
+/* ******************************navigation menu******************************** */
+
+.menuList {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	width: 100%;
+	height: 50px;
+	font-size: 1.2rem;
+}
+.item {
+	list-style: none;
+	padding: 4px;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	text-decoration: none;
+	color: black;
+}
+/*specials modal, code adapted from https://codepen.io/andrewerrico/pen/Efyrt */
+
+#specials {
+	-webkit-user-select: none;
+	/* Chrome/Safari */
+	-moz-user-select: none;
+	/* Firefox */
+	-ms-user-select: none;
+	/* IE10+ */
+	margin: auto;
+	width: 150px;
+	height: 40px;
+	line-height: 20px;
+	background: #ff1d25;
+	color: white;
+	font-weight: 400;
+	text-align: center;
+	border: 1px solid white;
+	cursor: pointer;
+}
+#specials:hover {
+	background: #cea66c;
+}
+#specials:active {
+	background: #444;
+}
+#specialsContent {
+	display: none;
+	border: 6px solid #cea66c;
+	padding: 2em;
+	width: 500px;
+	text-align: center;
+	background: #fff;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	cursor: pointer;
+}
+.promotion {
+	margin: auto;
+	display: block;
+	width: 280px;
+	padding: 20px;
+	resize: none;
+}
+/* The Close Button */
+
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+.close:hover, .close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+/* ********************"About" section*********************************** */
+
+#about {
+	background-image: url("../images/roses.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	min-height: 1000px;
+	width: 100%;
+}
+/* ACCORDION styles, used classes name given by Jquery UI */
+
+.ui-accordion-header {
+	background-color: #cea66c;
+	border: 1px solid black;
+	padding: 20px;
+	cursor: pointer;
+}
+.ui-accordion-content {
+	background-color: white;
+	line-height: 1.6;
+	padding: 50px;
+	border: 1px solid black;
+}
+#accordion {
+	margin: 0 auto;
+	width: 70%;
+}
+.ui-icon-circle-arrow-e {
+	width: 31px;
+	height: 31px;
+	background: url("../images/plus.png");
+	margin-right: 5px;
+	margin-top: 10px;
+	display: inline-block;
+}
+.ui-icon-circle-arrow-s {
+	margin-right: 5px;
+	margin-top: 10px;
+	width: 31px;
+	height: 31px;
+	background: url("../images/minus.png");
+	display: inline-block;
+}
+/* ******************"Services" section ***************************** */
+
+.boxes {
+	display: none;
+}
+.nailsDialog {
+	text-align: left;
+	padding: 50px;
+	line-height: 1.6;
+	background-color: white;
+}
+.ui-dialog {
+	background-color: white;
+	border: 1px solid #999;
+}
+.dialog {
+	background: white;
+	padding: 20px;
+}
+.ui-dialog-titlebar-close {
+	color: red;
+	float: right;
+	background-color: white;
+}
+.links {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 20px;
+}
+.links:hover {
+	cursor: pointer;
+}
+.group1 {
+	padding: 10px;
+	margin: 20px;
+}
+.icon {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	right: 50%;
+	transform: translate(-50%, -50%);
+}
+.serviceImg {
+	position: relative;
+	display: inline-block;
+}
+.backStyle {
+	background: #cea66c;
+}
+.icon:hover {
+	cursor: pointer;
+}
+.ui-button.ui-corner-all.ui-widget.ui-button-icon-only.ui-dialog-titlebar-close {
+	color: #ff1d25;
+	padding: 10px;
+	border: none;
+	font-size: 30px;
+	background-color: #f1eee9;
+}
+.ui-button.ui-corner-all.ui-widget.ui-button-icon-only.ui-dialog-titlebar-close:hover {
+	cursor: pointer;
+}
+/* ***********************************"Prices" section************************************* */
+
+#pricings {
+	background-image: url("../images/pricing.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	min-height: 1000px;
+	width: 100%;
+}
+.overlay-black {
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	width: 100%;
+	min-height: 1000px;
+}
+/* PRICE CALCULATOR*********************************** */
+
+.prices-info {
+	color: white;
+	width: 70%;
+	border-radius: 10px;
+	margin: 0 auto;
+	padding: 10px;
+	line-height: 1.6;
+}
+#theCalculator {
+	text-align: center;
+	width: 50%;
+	margin: 0 auto;
+	padding: 5px;
+	border: 5px solid #cea66c;
+	line-height: 30px;
+	font-size: 20px;
+	background-color: white;
+}
+#theCalculator .cont_details fieldset, .cont_order fieldset {
+	margin: 10px;
+	padding: 20px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	border-radius: 10px;
+}
+#theCalculator .cont_details input {
+	margin-bottom: 10px;
+	color: #000;
+}
+#theCalculator label {
+	display: block;
+	color: #000;
+	font-weight: bold;
+	line-height: 1.6;
+}
+#theCalculator label.inlinelabel {
+	display: inline;
+}
+#theCalculator .cont_order input {
+	margin-bottom: 5px;
+}
+#theCalculator .cont_order p {
+	padding-top: 5px;
+}
+#theCalculator input[type="text"]:hover, #theCalculator input[type="text"]:active {
+	background-color: #FAF398;
+}
+#theCalculator div#totalPrice {
+	padding: 10px;
+	font-weight: bold;
+	background-color: #cea66c;
+}
+#theCalculator label.radiolabel {
+	font-weight: normal;
+	display: inline;
+}
+#extras {
+	font-family: "Quicksand";
+	padding: 5px;
+	margin: 5px;
+	font-size: 18px;
+	border: 1px solid black;
+}
+/* *********************************GOOGLE MAP******************** */
+
+#map {
+	height: 400px;
+	width: 70%;
+	margin: 0 auto;
+}
+.styleSections {
+	min-height: 700px;
+	width: 80%;
+	margin: auto;
+	padding: 15px;
+}
+/* *********************FOOTER**************************** */
+
+#footer {
+	padding: 10px;
+	background-color: #cea66c;
+	color: white;
+	line-height: 1.6;
+}

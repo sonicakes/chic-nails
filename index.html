@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset='UTF-8'>
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+
+	<title>Chic Nail Salon</title><!--included JQuery CDN  -->
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js">
+	</script><!--included JQuery UI CDN  -->
+
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js">
+	</script><!--included link to Google Fonts  -->
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"><!--included link to custom css stylesheet  -->
+	<link href="stylesheets/styles.css" rel="stylesheet">
+</head>
+
+<body>
+	<!-- ******************start HOMEPAGE************************** -->
+
+
+	<section id="homepage">
+		<div id="landing">
+			<!--class "overlay" provides white 0.5 opacity to the background image  -->
+
+
+			<div class="overlay">
+				<div class="container">
+					<!-- menu navigation -->
+
+
+					<div class="menuList" id="navs" role="navigation">
+						<!--menu nav uses flexbox model, where class "menuList" is a parent element and "item" class elements are its children  -->
+
+
+						<div class="item">
+							<a href="#homepage" style="margin: 0 auto;"><img alt="Logo of Chic Nails Salon" src="images/logo.png"></a>
+						</div>
+						<a class="item" href="#aboutus">About</a> <a class="item" href="#services">Services</a> <a class="item" href="#pricings">Prices</a> <a class="item" href="#contact">Contact</a>
+
+						<div class="item">
+							<!-- Specials Modal, code adapted from https://codepen.io/andrewerrico/pen/Efyrt-->
+
+
+							<div id="specials" role="button">
+								See Our Specials
+							</div>
+
+
+							<div id="specialsContent">
+								<!--close button on the modal  -->
+								<span class="close" title="Close Modal">&times;</span>
+
+								<h2>Check out our specials!</h2>
+
+
+								<div>
+									<p class="promotion">EXTENSIONS FOR ONLY $25.00!</p>
+
+
+									<p class="promotion">GEL + EXTENSIONS FOR ONLY $49.99!</p>
+
+
+									<p class="promotion">MANICURE + SHELLAC FOR ONLY $35!</p>
+
+
+									<p class="promotion">MANICURE + PEDICURE + NAIL ART FOR ONLY $39.99!</p>
+
+
+									<p class="promotion">MANICURE + PEDICURE + SHELLAC $29.99!</p>
+
+
+									<p class="promotion">CUSTOM DESIGN + ACRYLICS FOR ONLY $59.99!</p>
+								</div>
+							</div>
+							<!--end Specials modal  -->
+						</div>
+					</div>
+					<!-- end menu navigation -->
+
+
+					<div class="hero-text">
+						<h1><em>Nothing less than</em><br>
+						<span><a href="#homepage" style="margin: 0 auto;"><img alt="Logo of Chic Nails Salon" src="images/logo.png"></a></span>
+						</h1>
+
+
+						<h4><em>for your nails!</em>
+						</h4>
+					</div>
+
+
+					<div style="margin-top:15%;">
+						<img alt="Icon to scroll down" src="images/scroll.png"> scroll down to see more
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--hero text  -->
+	</section>
+	<!-- ABOUT-refactored section -->
+
+
+	<div id="aboutus">
+		<div class="styleSections">
+			<h2 style="margin-bottom:100px; margin-top:50px; text-align:center;"><strong>About Us</strong>
+			</h2>
+
+
+			<div id="accordion">
+				<h3 class="accordion-title">History</h3>
+
+
+				<div class="contents">
+					<p class="accordion-info">Chic Nail Salon started as a small family enterprise, in the heart of Richmond, NSW in 2006. For more than 10 years Chic Salon served the Hawkesbury Community at its finest. It now grew to a business of 20 employees and is located in the amazing building just around the corner of beloved Richmond Marketplace. The Salon features air conditioning, nails spa and kids room.</p>
+				</div>
+
+
+				<h3>Mission</h3>
+
+
+				<div class="contents">
+					<p class="accordion-info">Chic Salon’s mission is to improve lives of local women by providing exceptional Nail services at reasonable prices. Additionally, the business donates part of profits to the local Aged Care Centre and Caring Disability Services in Richmond. Our customers are aware of their influence on the community by purchasing Chic Nails services.</p>
+				</div>
+
+
+				<h3>Staff</h3>
+
+
+				<div class="contents">
+					<p class="accordion-info">Our staff is a hugely experienced, professional, friendly team of young men and women who strive to do their best to satisfy our customers. All staff members have their TAFE diplomas in Beauty Services, have only the best safety practices and are undergoing training regularly. At Chic Nail Salon, we provide individual approach to every and each one.</p>
+				</div>
+
+
+				<h3>Awards</h3>
+
+
+				<div class="contents">
+					<p class="accordion-info">Chic Nail Salon has won several awards over the years, including “Best Local Business” and “Best Nail Station” in 2010, 2014, and 2016. Our salon has entered a lot of regional, state and multinational competitions and welcomed independent observers of Safety and Hygiene Practices from Sydney.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--SERVICES SECTION  -->
+
+
+	<section id="services" style="background-color:#cea66c;">
+		<!-- class "styleSections" allows to put contents of the section limited by container (80% of the screen width), whereas stil maintaing background of full screen width -->
+
+
+		<div class="styleSections">
+			<h2 style="text-align:center; margin:50px;">Services</h2>
+
+
+			<p style="text-align:center;">Click on the icon to read about our exceptional services! Check out what's on special (top right).</p>
+			<!-- dialog/modal made with JQuery UI Dialog, http://api.jqueryui.com/dialog/.-->
+
+
+			<div class="links">
+				<!--parallax effect achieved using plug-in Tilt.js, adress https://gijsroge.github.io/tilt.js/  -->
+
+
+				<div class="dialogOpener" data-dialog-to-open="manicure" data-tilt="" role="dialog" style="transform-style: preserve-3d; background-size: cover; background-image: url('images/manicure-nails.jpg'); border-radius:20px; width: 30%; height: 350px;margin:10px;">
+					<h5 style="text-align: center; text-transform:uppercase;font-size:20px; font-weight:800;background-color:white;">Manicure</h5>
+					<a class="group1"><img alt="Manicure" class="icon" height="50" src="images/plus.png" style="transform: translateZ(20px)" width="50"></a>
+				</div>
+
+
+				<div class="dialogOpener" data-dialog-to-open="pedicure" data-tilt="" style="transform-style: preserve-3d; background-size: cover; background-image: url('images/pedicure-nails.jpg'); border: 6px solid #cea66c;width: 30%; height: 350px;margin:10px;">
+					<h5 style="text-align: center; text-transform:uppercase;font-size:20px; font-weight:800;background-color:white;">Pedicure</h5>
+					<a class="group1"><img alt="Pedicure" class="icon" height="50" src="images/plus.png" style="transform: translateZ(20px)" width="50"></a>
+				</div>
+
+
+				<div class="dialogOpener" data-dialog-to-open="gels" data-tilt="" style="transform-style: preserve-3d; background-size: cover; background-image: url('images/gel-nails.jpg');border: 6px solid #cea66c; width: 30%; height: 350px;margin:10px;">
+					<h5 style="text-align: center; text-transform:uppercase;font-size:20px; font-weight:800;background-color:white;">Gel Nails</h5>
+					<a class="group1"><img alt="Gel Nails" class="icon" height="50" src="images/plus.png" style="transform: translateZ(20px)" width="50"></a>
+				</div>
+
+
+				<div class="dialogOpener" data-dialog-to-open="acrylic" data-tilt="" style="transform-style: preserve-3d; background-size: cover; background-image: url('images/acrylic-nails.jpg');border: 6px solid #cea66c; width: 30%; height: 350px; margin:10px;">
+					<h5 style="text-align: center; text-transform:uppercase;font-size:20px; font-weight:800;background-color:white;">Acrylic Nails</h5>
+					<a class="group1"><img alt="Acrylic Nails" class="icon" height="50" src="images/plus.png" style="transform: translateZ(20px)" width="50"></a>
+				</div>
+
+
+				<div class="dialogOpener" data-dialog-to-open="custom" data-tilt="" style="transform-style: preserve-3d; background-size: cover; background-image: url('images/custom-nails.jpg'); border: 6px solid #cea66c;width: 30%; height: 350px;margin:10px;">
+					<h5 style="text-align: center; text-transform:uppercase;font-size:20px; font-weight:800;background-color:white;">Custom Design</h5>
+					<a class="group1"><img alt="Custom Design" class="icon" height="50" src="images/plus.png" style="transform: translateZ(20px)" width="50"></a>
+				</div>
+
+
+				<div class="dialogOpener" data-dialog-to-open="nailarts" data-tilt="" style="transform-style: preserve-3d; background-size: cover; background-image: url('images/nail-art.jpg');border: 6px solid #cea66c; width: 30%; height: 350px;margin:10px;">
+					<h5 style="text-align: center; text-transform:uppercase;font-size:20px; font-weight:800;background-color:white;">Nail Art</h5>
+					<a class="group1"><img alt="Nail Art" class="icon" height="50" src="images/plus.png" style="transform: translateZ(20px)" width="50"></a>
+				</div>
+			</div>
+
+
+			<div class="boxes">
+				<div class="nailsDialog" id="manicureDialog">
+					<h3 style="text-align:center; margin-bottom: 10px;">Manicure</h3>
+
+
+					<p>A manicure is a cosmetic beauty treatment for the fingernails and hands performed at home or in a nail salon. It consists of filing and shaping the free edge, pushing and clipping (with a cuticle pusher and cuticle nippers) any nonliving tissue (but limited to the cuticle and hangnails), treatments with various liquids, massage of the hand, and the application of fingernail polish.</p>
+					<br>
+
+
+					<p>Some manicures include painting pictures or designs on the nails, or applying small decals or imitation jewels. Other nail treatments may include the application of artificial gel nails, tips, or acrylics, which may be referred to as French manicures. In many areas, manicurists are licensed and follow regulations. Since skin is manipulated and is sometimes trimmed, there is a risk of spreading infection when tools are used across many people. Therefore, having proper sanitation can be a serious issue.</p>
+					<!-- https://en.wikipedia.org/wiki/Manicure -->
+				</div>
+
+
+				<div class="nailsDialog" id="pedicureDialog">
+					<h3 style="text-align:center; margin-bottom: 10px;">Pedicure</h3>
+
+
+					<p>A pedicure is a cosmetic treatment of the feet and toenails, analogous to a manicure. Pedicures are done for cosmetic, therapeutic purposes. They are popular throughout the world, and especially among women. Pedicures include care not only for the toenails; dead skin cells are rubbed off the bottom of the feet using a rough stone (often a pumice stone). Skin care is often provided up to the knee, including granular exfoliation, moisturizing, and massage. The word pedicure is derived from the Latin words pedis, which means "of the foot", and cura, which means "care".</p>
+					<!--https://en.wikipedia.org/wiki/Pedicure  -->
+				</div>
+
+
+				<div class="nailsDialog" id="gelsDialog">
+					<h3 style="text-align:center; margin-bottom: 10px;">Gel Nails</h3>
+
+
+					<p>There are two types of gel, hard gel and soft gel. Hard gel gets its name because, once cured, it is tough enough to be made into a nail extension. Nail extensions are artificial nails created by using a nail product to extend the nail past the edge of the natural nail. Soft gel refers to the gel products that are too soft to create a nail extension. This includes gel polishes and thicker gels meant for gel-overlay services.</p>
+					<br>
+
+
+					<p>Gel polishes are used for the increasingly popular gel polish manicures. These manicures, when done by caring, experienced, and trained professionals, are gentle to the natural nail and the polish stays intact on the nail for at least a couple of weeks with high shine and no cracking, peeling or chipping. The product used to create nail extensions using gel or gel nails is gel, not to be confused with acrylic nails, which are created using liquid monomer and polymer powder. All gel services are performed using some form of gel, which usually comes in pots of gel or bottles of gel polish. Gel also comes in a variety of colors. All forms of gel require curing, or hardening, under a UV (ultraviolet) light, which can be either a conventional bulb or LED lamp.</p>
+					<!--https://en.wikipedia.org/wiki/Gel_nails  -->
+				</div>
+
+
+				<div class="nailsDialog" id="acrylicDialog">
+					<h3 style="text-align:center; margin-bottom: 10px;">Acrylic Nails</h3>
+
+
+					<p>Acrylic nails are a more common form of artificial nails and may also be referred to as "liquid and powder nails". They have been around for decades whereas gel nail products are still a very recent addition to the nail industry. The most popular acrylic nail service is the pink and white which refers to the use of pink colored acrylic and a white acrylic powder to create a long-lasting French manicure look. Just as with gel nails, acrylic nail extensions can be created using forms to create sculpted nails or tips.</p>
+					<br>
+
+
+					<p>Forms are special stickers that are placed at the end of each finger, under the finger nail, and secured in place so that wet acrylic can be sculpted into a nail extension at the fingernail's edge. Thus, each nail extension is sculpted and why this procedure is referred to as "sculpts" or "sculpted nails." Tips are simply mass-produced plastic nail tips that are adhered to the fingernail's edge using nail resin. Each tip is clipped and filed into shape before applying the wet acrylic and the nail extension is made.</p>
+				</div>
+
+
+				<div class="nailsDialog" id="customDialog">
+					<h3 style="text-align:center; margin-bottom: 10px;">Custom Design</h3>
+
+
+					<p>At Chic Nail Salon, we are proud to provide only the best hand-crafted custom design nail services. Whereas you choose to bring your own polish or other materials, or you need a specific gradient to match your unicorn party outift – we are here to help! Give us a call or pop in for a session – our experts will do their absolute best to satisfy even the most exquisite customer!</p>
+				</div>
+
+
+				<div class="nailsDialog" id="nailartsDialog">
+					<h3 style="text-align:center; margin-bottom: 10px;">Nail Art</h3>
+
+
+					<p>The nail care industry has been growing like never before ever since the invention of modern nail polish. In 2012, the United States witnessed a surging popularity of nail art. In the same year, a short nail art documentary was released: "NAILgasm". The film explored the growing trend of nail art; from women across the world to high fashion runways.</p>
+					<br>
+
+
+					<p>In 2014, Nailpolis.com, the online Museum of Nail Art was founded for nail artists and hobbyists to share their designs. It is free to visit this website, however, only members of Nailpolis are allowed to share their art. Women commonly use Youtube and Pinterest to learn how to do the newest and most interesting designs at home.</p>
+					<!-- https://en.wikipedia.org/wiki/Nail_art -->
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--end services section  -->
+	<!--PRICES SECTION  -->
+
+
+	<div id="pricings">
+		<!-- class "overlay black" provides black, opacity 0.5 layer on top of "Prices" section -->
+
+
+		<div class="overlay-black">
+			<div class="styleSections">
+				<!-- <section  id="prices"> -->
+
+
+				<div class="prices-info">
+					<h2 style="margin:50px; text-align:center">Prices</h2>
+
+
+					<p style="margin-bottom:10px;">At Chic Nail Salon, we intend to provide exceptional services at reasonable prices. You can estimate the price of your chosen services with our Price Calculator. Simply choose services and any extras, include any desired Nail Art and Custom Design, and be surprised by our competitive price range! You're also welcome to check out our specials on the top right of the screen.</p>
+				</div>
+				<!--*************************************PRICE CALCULATOR, code adapted from http://javascript-coder.com/javascript-form/javascript-calculator-script.phtml******************************  -->
+
+
+				<div id="container-price">
+					<!-- <div id="priceSection-left" > -->
+
+
+					<div id="theCalculator">
+						<form id="priceCalc" name="priceCalc">
+							<div class="cont_order">
+								<fieldset>
+									<label>Choose a service</label> <label class='radiolabel'><input aria-label="Manicure Service" checked class="triggerPriceCalcOnChange" name="selectedService" type="radio" value="20"> Manicure ($20)</label><br>
+									<label class='radiolabel'><input aria-label="Pedicure Service" class="triggerPriceCalcOnChange" name="selectedService" type="radio" value="25"> Pedicure ($25)</label><br>
+									<label class='radiolabel'><input aria-label="Manicure and Pedicure Service Combined" class="triggerPriceCalcOnChange" name="selectedService" type="radio" value="40"> ManiPedi ($40)</label><br>
+									<label class='radiolabel'><input aria-label="Extension Service" class="triggerPriceCalcOnChange" name="selectedService" type="radio" value="37"> Extensions ($37)</label><br>
+									<label>Extras (Shellac, Acrylic, Gel)</label> <select class="triggerPriceCalcOnChange" id="extras" name='add-ons'>
+										<option value="0">
+											Select Extras
+										</option>
+
+										<option value="15">
+											Shellac ($15)
+										</option>
+
+										<option value="20">
+											Gel ($20)
+										</option>
+
+										<option value="20">
+											Acrylic ($20)
+										</option>
+									</select><br>
+
+
+									<p><label class="inlinelabel" for='includeNailArt'>Include Nail Art ($35)</label> <input aria-label="Checkbox for including Nail art" class="triggerPriceCalcOnChange" id="includeNailArt" name='includeNailArt' type="checkbox" value="35"></p>
+
+
+									<p><label class="inlinelabel" for='includeSpeciality'>Include Speciality ($40)</label> <input aria-label="checkbox for including Speciality Services" class="triggerPriceCalcOnChange" id="includeSpeciality" name="includeSpeciality" type="checkbox" value="40"></p>
+
+
+									<div id="totalPrice">
+									</div>
+								</fieldset>
+							</div>
+						</form>
+					</div>
+					<!--end of price calculator-->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--end prices section  -->
+	<!--************************CONTACT section****************************  -->
+
+
+	<section id="contact" style="margin-bottom:35px;">
+		<div class="styleSections">
+			<h2 style="text-align:center;margin-top:30px;margin-bottom:30px;">Contact Us</h2>
+
+
+			<div class="contactInfo" style="text-align:center; margin: 20px; line-height:1.6;">
+				<h3>Opening Hours</h3>
+
+
+				<p>Mon-Fri:9am - 6pm</p>
+
+
+				<p>Sat & Sun: 10am - 5pm</p>
+
+
+				<h3>Adress</h3>
+
+
+				<p>78 March Street, Richmond NSW 2753</p>
+
+
+				<h3>Phone</h3>
+
+
+				<p>0123456</p>
+
+
+				<h3>Email</h3>
+
+
+				<p>chicnails@gmail.com</p>
+			</div>
+			<!--Google Map included from https://developers.google.com/maps/documentation/javascript/  -->
+
+
+			<div id="map">
+			</div>
+		</div>
+	</section>
+	<!--end CONTACT section  -->
+	<!--**************************************************FOOTER***********************************************  -->
+
+
+	<section id="footer">
+		<p>This website has been created as part of an assignment in an approved course of study for Curtin University and contains copyright material not created by the author. All copyright material used remains copyright of the respective owners and has been used here pursuant to Section 40 of the Copyright Act 1968 (Commonwealth of Australia). No part of this work may be reproduced without consent of the original copyright owners. See code comments for references.</p>
+
+
+		<p style="text-align:center">Sofya Parker, 2017</p>
+	</section>
+	<!--END FOOTER  -->
+	<!-- included custom JS script file to load after the body of the document is loaded, hence located at the bottom of the html as opposed to the head -->
+	<script src="scripts/script.js">
+	</script> <!-- included JS file to ensure Google Maps API functioning properly -->
+	 
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBiApSIwPPfjxRdX2LYYqYjDrVraMk-WE&callback=initMap">
+	</script> <!-- included titl.jquery.js to make parallax effects work on "Services" section -->
+	 
+	<script src="scripts/tilt.jquery.js">
+	</script> <!-- included minified jquery file of tilt.js CDN -->
+	 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js">
+	</script>
+</body>
+</html>
